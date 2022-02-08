@@ -37,6 +37,7 @@ yarn build  #执行了这一步rm -rf dist;npx webpack
 ```
  yarn add css-loader --dev
  yarn add style-loader --dev
+ yarn add webpack-dev-server
 ```
 
 #
