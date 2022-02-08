@@ -21,7 +21,15 @@ module.exports = {
 - 加快访问速度
 - 首页不缓存，缓存CSS、JS
 
-# 5、运行
+# 6、运行
 ```
-rm -rf dist;npx webpack
+yarn build  #执行了这一步rm -rf dist;npx webpack
+```
+
+# 7.webpack 生成 HTML
+```
+    plugins: [new HtmlWebpackPlugin({
+        title: "亦蔚然",
+        template: "src/assets/index.html"
+    })],
 ```
