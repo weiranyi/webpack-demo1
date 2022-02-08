@@ -13,5 +13,14 @@ module.exports = {
         title: "亦蔚然",
         template: "src/assets/index.html"
     })],
+    module: {
+        rules:[
+            {
+                test: /\.css$/,
+                // css-loader:加载到js中；style-loader放到head标签中
+                use: ['style-loader','css-loader'],
+            },
+        ],
+    },
 };
 

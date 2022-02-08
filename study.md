@@ -33,3 +33,11 @@ yarn build  #执行了这一步rm -rf dist;npx webpack
         template: "src/assets/index.html"
     })],
 ```
+# 加载CSS
+```
+ yarn add css-loader --dev
+ yarn add style-loader --dev
+```
+
+#
+http-server . -c-1
