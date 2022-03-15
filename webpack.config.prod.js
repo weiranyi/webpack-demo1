@@ -16,6 +16,7 @@ module.exports = {
     ],
     module: {
         rules: [
+            ...base.module.rules,
             {
                 test: /\.css$/,
                 // css-loader:加载到js中；style-loader放到head标签中
