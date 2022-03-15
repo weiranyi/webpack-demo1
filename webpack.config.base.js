@@ -18,6 +18,10 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.less$/,
+                loader: ["style-loader", "css-loader", "less-loader"]
+            },
+            {
                 test: /\.s[ac]ss$/i,
                 use: [
                     // Creates `style` nodes from JS strings

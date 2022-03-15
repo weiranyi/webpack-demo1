@@ -1,2 +1,2 @@
-import './x.scss';
+import './x.less';
 export default 'xxx'
