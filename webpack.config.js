@@ -1,28 +1,21 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+const base = require('./webpack.config.base.js')
 module.exports = {
+    ...base,
     mode: 'development',
     devtool: 'inline-source-map',
     devServer: {
-        contentBase:'./dist',
+        contentBase: './dist',
     },
-    entry: './src/index.js',
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        // 文件名中的hash是便于添加缓存的
-        filename: '[name].[contenthash].js',
-    },
-    plugins: [new HtmlWebpackPlugin({
-        title: "亦蔚然",
-        template: "src/assets/index.html"
-    })],
     module: {
-        rules:[
+        rules: [
             {
                 test: /\.css$/,
                 // css-loader:加载到js中；style-loader放到head标签中
-                use: ['style-loader','css-loader'],
+                use: ['style-loader', 'css-loader'], //css在页面里面
             },
         ],
     },
